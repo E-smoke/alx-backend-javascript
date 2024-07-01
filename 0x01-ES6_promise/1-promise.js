@@ -1,10 +1,12 @@
 export default function getFullResponseFromAPI(success) {
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (success) {
-      resolve({ status: 200, body: 'Success' }); // Use single quotes for 'Success'
+      resolve({
+        status: 200,
+        body: 'Success',
+      });
     } else {
-      reject('The fake API is not working currently'); // Use single quotes consistently
+      reject(new Error('The fake API is not working currently'));
     }
   });
-  return promise;
 }
