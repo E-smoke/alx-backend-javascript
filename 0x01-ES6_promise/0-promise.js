@@ -3,5 +3,5 @@ function getResponseFromAPI(){
   setTimeout(() => {
     resolve("done");
   }, 500);
-} )
+} );
 }
